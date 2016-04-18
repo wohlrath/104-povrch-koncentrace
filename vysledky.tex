@@ -1,1 +1,62 @@
 \section*{Výsledky měření}
+Teplota v místnosti byla \SI{23.5(5)}{\degreeCelsius}.
+Teplota destilované vody i lihu byla před smícháním stejná.
+
+Drátek v rámečku jsme měřili posuvným měřítkem a měl délku $l = \SI{1.94(5)}{\cm}$.
+
+Na váhy jsme pověsili přívažek o hmotnosti \SI{200}{\milli\g}.
+Jelikož síly od sebe odečítáme, nemá přívažek na výsledek žádný vliv.
+
+Torzními vahami jsme přímo měřili rozdíl hmotností na obou ramenech.
+Ke změření síly je tedy nutný přepočet na tíhovou sílu $F = mg$, tedy
+\begin{equation}
+P_1 = m_1 \cdot g \qquad P_2= m_2 \cdot g \,,
+\end{equation}
+kde $m_1$, $m_2$ jsou váhami změřené rozdíly hmotností na ramenech, když je rámeček těsně pod vodou resp. právě se odtrhl od hladiny, a $g$ je tíhové zrychlení.
+Tíhové zrychlení v Praze je \SI{9,814}{\m\per\s\squared} \cite{gravitace}, chybu zanedbáváme.
+
+Vzorec \eqref{eq::p0sigma} má po úpravě a dosazení tvar
+\begin{equation}
+\sigma = \frac{(m_2-m_1)\cdot g}{2 \cdot l}
+\end{equation}
+
+Nejdříve jsme změřili povrchové napětí čisté destilované vody a čistého lihu.
+Poté jsme s pomocí pyknometru připravili roztok s \SI{50}{\percent} koncentrací lihu a tento roztok jsme dále ředili vodou vždy v poměru $1:1$.
+
+V tabulce \ref{tab::namereny} jsou pro měřené koncentrace uvedeny hodnoty $m_1$, $m_2$, vypočtené síly $P_0$ a povrchové napětí~$\sigma$.
+U $m_1$ a $m_2$ uvádíme přímo číselný údaj na vahách, pro výpočet celkové hodnoty $P_1$ nebo $P_2$ by bylo nutné přičíst hmotnost přívažku.
+Směrodatnou odchylku $\mu_m$\footnote{Symbol $\mu$ pro směrodatnou odchylku používáme, aby nedošlo k záměně za povrchové napětí $\sigma$.} určení rozdílu hmotností $(m_2-m_1)$ odhadujeme na \SI{5}{\milli \g}.
+Z toho se odvíjí směrodatná odchylka síly $\mu_{P_0} = \SI{0.05}{\milli \newton}$.
+Směrodatnou odchylku povrchového napětí počítáme jako
+\begin{equation}
+\mu_\sigma = \sigma \sqrt{ \left(  \frac{\mu_{P_0}}{P_0} \right)^2 +
+\left(  \frac{\mu_{l}}{l} \right)^2   }
+\end{equation}
+
+Závislost povrchového napětí na koncentraci lihu v roztoku je zanesena do grafu \ref{grp::graf}.
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{ccccc}
+koncentrace lihu & $m_1 (\si{\milli\g})$ & $m_2 (\si{\milli\g})$ & $P_0 (\si{\milli \newton})$ & $\sigma (\num{e-3}\,\si{\newton\per\metre})$ \\ \hline 
+\SI{0}{\percent} & \num{125} & \num{448} & \num{3.17} & \num{82(3)} \\
+\SI{0.4}{\percent} & \num{118} & \num{430} & \num{3.06} & \num{79(3)} \\
+\SI{0.8}{\percent} & \num{117} & \num{419} & \num{2.96} & \num{76(3)} \\
+\SI{1.6}{\percent} & \num{113} & \num{404} & \num{2.86} & \num{74(3)} \\
+\SI{3.1}{\percent} & \num{116} & \num{401} & \num{2.80} & \num{72(3)} \\
+\SI{6.3}{\percent} & \num{111} & \num{370} & \num{2.54} & \num{66(3)} \\
+\SI{12.5}{\percent} & \num{109} & \num{327} & \num{2.14} & \num{55(2)} \\
+\SI{25}{\percent} & \num{106} & \num{277} & \num{1.68} & \num{43(2)} \\
+\SI{50}{\percent} & \num{105} & \num{238} & \num{1.31} & \num{34(2)} \\
+\SI{100}{\percent} & \num{106} & \num{225} & \num{1.17} & \num{30(2)} \\
+\end{tabular}
+\caption{Naměřené hodnoty povrchového napětí pro různé koncentrace lihu v roztoku}
+\label{tab::namereny}
+\end{tabulka}
+
+\begin{graph}[htbp] 
+\centering
+\input{graf.tex}
+\caption{Závislost povrchového napětí na koncentraci lihu v roztoku}
+\label{grp::graf}
+\end{graph}
