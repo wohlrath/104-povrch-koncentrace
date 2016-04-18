@@ -6,7 +6,7 @@ set xlabel 'Koncentrace lihu (\si{\percent})'
 set ylabel 'Povrchové napětí (\num{e-3}\,\si{\newton\per\metre})'
 set grid x,y
 set xrange[0:100]
-set yrange[20:90]
+set yrange[20:80]
 
 
 
